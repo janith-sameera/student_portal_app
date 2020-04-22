@@ -25,7 +25,7 @@ class Pagescontroller extends Controller
         $student->grade=$request->Grade;
         $student->email=$request->Email;
         $student->save();
-//        $request->session()->flash('alert-success', 'User was successful Saved!');
+        $request->session()->flash('alert-success', 'User was successful Saved!');
         return redirect()->back() ->with('alert', 'Updated!');
     }
 
