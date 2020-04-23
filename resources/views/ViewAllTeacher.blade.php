@@ -171,6 +171,7 @@
                                     <th>Email</th>
                                     <th>Update</th>
                                     <th>Delete</th>
+                                    <th>Generate Password</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -183,6 +184,7 @@
                                         <td>{{$teacher->email}}</td>
                                         <td><a href="/teacherdelete/{{$teacher->id}}" class="btn btn-success" style="background-color: red; color: white;">Delete</a></td>
                                         <td><a href="/teacherupdate/{{$teacher->id}}" class="btn btn-success">Update</a></td>
+                                        <td><a href="/teacher_password_update/{{$teacher->id}}" class="btn btn-danger">Password</a></td>
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -195,6 +197,7 @@
                                     <th>Email</th>
                                     <th>Update</th>
                                     <th>Delete</th>
+                                    <th>Generate Password</th>
                                 </tr>
                                 </tfoot>
                             </table>

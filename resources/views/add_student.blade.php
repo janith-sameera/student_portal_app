@@ -137,6 +137,7 @@
             <div class="card-header">
                 <h3 class="card-title">Enter Student Details</h3>
             </div>
+            <br>
             @if(!empty($errors->first()))
                 <div class="row col-lg-12">
                     <div class="alert alert-danger">
@@ -176,11 +177,27 @@
                     </div>
                 </div>
                 <!-- /.card-body -->
-
+                <script src="jquery-3.3.1.min.js" type="text/javascript"></script>
+                <script>
+                    $(document).ready(function () {
+                        $('#main_login').click(function () {
+                            var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+                            var string_length = 8;
+                            var randomstring = '';
+                            for (var i=0; i<string_length; i++) {
+                                var rnum = Math.floor(Math.random() * chars.length);
+                                randomstring += chars.substring(rnum,rnum+1);
+                            }
+                            $("#result").html(randomstring);
+                        });
+                    });
+                </script>
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Submit</button>
+                    <span id="result" style="color: red; margin-left: 10px;"></span>
                 </div>
             </form>
+
         </div>
     </div>
     <!-- /.content-wrapper -->

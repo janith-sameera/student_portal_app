@@ -172,6 +172,7 @@
                                     <th>Grade</th>
                                     <th>Update</th>
                                     <th>Delete</th>
+                                    <th>Generate Password</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -185,6 +186,7 @@
                                         <td>{{$students->grade}}</td>
                                         <td><a href="/studentdelete/{{$students->id}}" class="btn btn-success" style="background-color: red; color: white;">Delete</a></td>
                                         <td><a href="/studentupdate/{{$students->id}}" class="btn btn-success">Update</a></td>
+                                        <td><a href="/student_password_update/{{$students->id}}" class="btn btn-danger">Password</a></td>
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -198,6 +200,7 @@
                                     <th>Grade</th>
                                     <th>Update</th>
                                     <th>Delete</th>
+                                    <th>Generate Password</th>
                                 </tr>
                                 </tfoot>
                             </table>
