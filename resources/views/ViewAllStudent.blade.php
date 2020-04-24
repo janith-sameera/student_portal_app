@@ -148,7 +148,6 @@
                 </div>
             </div><!-- /.container-fluid -->
         </section>
-
         <!-- Main content -->
         <section class="content">
             <div class="row">
@@ -186,7 +185,7 @@
                                         <td>{{$students->grade}}</td>
                                         <td><a href="/studentdelete/{{$students->id}}" class="btn btn-success" style="background-color: red; color: white;">Delete</a></td>
                                         <td><a href="/studentupdate/{{$students->id}}" class="btn btn-success">Update</a></td>
-                                        <td><a href="/student_password_update/{{$students->id}}" class="btn btn-danger">Password</a></td>
+                                        <td><input type="submit" class="btn btn-danger" id="add_pass" value="Password"></td>
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -213,8 +212,29 @@
             </div>
             <!-- /.row -->
         </section>
-        <!-- /.content -->
     </div>
+
+        <div id="tableManager" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Passengers</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="dropdown-flight-menu passenger-count-drop">
+
+
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" value="Ok" id="ok" class="form-control btn btn-primary">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     <!-- /.content-wrapper -->
     <footer class="main-footer">
         Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <a href="http://optimizesolutions.lk" target="_blank" >Optimize Solutions</a>
@@ -229,6 +249,7 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
+<script src="jquery-3.3.1.min.js" type="text/javascript"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
 <script src="../../plugins/jquery/jquery.min.js"></script>

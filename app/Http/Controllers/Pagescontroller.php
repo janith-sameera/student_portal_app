@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\login;
 use App\student;
 use App\teacher;
 use Illuminate\Http\Request;
@@ -121,4 +122,12 @@ class Pagescontroller extends Controller
         $data->save();
         return redirect()->back()->with('alert', 'Updated!');
     }
+
+    public function passwordStudent(Request $request){
+        $login=new login();
+
+
+    }
+
+
 }

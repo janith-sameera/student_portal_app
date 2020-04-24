@@ -47,6 +47,7 @@ Route::post('/save_student','Pagescontroller@save_student');
 Route::get('/studentdelete/{id}','Pagescontroller@delete_student');
 Route::get('/studentupdate/{id}','Pagescontroller@update_student');
 Route::post('/updateStudent','Pagescontroller@NewUpdateStudent');
+Route::post('/student_password_update','Pagescontroller@passwordStudent');
 
 
 Route::post('/save_teacher','Pagescontroller@save_teacher');
